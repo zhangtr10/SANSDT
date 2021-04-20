@@ -1,0 +1,18 @@
+#!/bin/sh
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=1
+#SBATCH --mem-per-cpu=10G
+#SBATCH -t 10-30:00:00
+#SBATCH -J SANS
+#SBATCH -o %x.o.%j
+#SBATCH -e %x.e.%j
+
+#module load gcc/lammps/31Mar17
+#module load gcc/openmpi/3.0.1
+#module load intel-11.1
+
+time python main.py 
+#time ./a.out 
+#time ./d.out 
+#time ./a.out bulk250N_combine.xyz  2000 2400
+#time ./test.out diffusive_250N5r40l_combine.xyz  2700 3001

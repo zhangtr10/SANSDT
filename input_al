@@ -1,0 +1,11 @@
+6    *number of layers nlayer
+10000      #number of neutrons
+25         # j bragg orders
+380        # H
+400        #pitch number d 
+190        #average width  wg
+75         #Al2o3 tickness L
+13000      #detector distance
+{HEIGHTS}      #height of the channel
+{WIDTHS}    #width of the channels
+{AL_THICKNESS}         #Al2o3 tickness L

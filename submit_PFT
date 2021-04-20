@@ -1,0 +1,13 @@
+#!/bin/sh
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=1
+#SBATCH --mem-per-cpu=500MB
+#SBATCH -t 5:00:00
+#SBATCH -J fit
+#SBATCH -o %x.o.%j
+#SBATCH -e %x.e.%j
+
+module load intel-11.1
+module load openmpi-1.4.3-intel
+
+time /mnt/rrio1/home/tianren/neutron/cma_2_set_6layer/./a.out input_al output >./LOG
